@@ -1,5 +1,6 @@
 @media (max-width: 769px) {
     body {
+        background: url(../images/bg-mobile.svg) cente center no-repeat;
         display: flex;
         flex-direction: column;
         width: 70%;
