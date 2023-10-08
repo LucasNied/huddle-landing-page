@@ -1,16 +1,20 @@
 html {
-    font-size: 62,5%;
+    font-size: 62, 5%;
 }
 
 body {
     display: grid;
-    grid-template-areas: "header header"
-                         "painel text"
-                         "footer footer";
-    grid-template-columns: repeat(2, 1fr);
-    max-width: var(--max-width-size);                     
-    background: url('../images/bg-desktop.svg') no-repeat;
+    grid-template-rows: 160px auto 60px;
+    grid-template-areas:"header header"
+                        "painel text"
+                        "footer footer";
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: url(../images/bg-desktop.svg) center center no-repeat;
     background-color: hsl(257, 40%, 49%);
+    background-size: cover;
+    max-width: var(--max-width-size) center center;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,13 +23,12 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px 30px;
+    padding: 30px;
 }
 
 .header img {
-    height: 3rem;
-    width: 8rem;
-    padding: 0 auto;
+    height: 4rem;
+    width: 12rem;
 }
 
 .painel {
@@ -38,13 +41,14 @@ body {
 .painel .image {
     width: 100%;
     margin: 1.8rem;
+    padding: 0;
 }
 
 .text {
     flex-wrap: wrap;
     grid-area: text;
     color: #fff;
-    margin: 0 auto;
+    padding: 0 30px;
     width: 100%;
 }
 
@@ -53,13 +57,13 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 3rem 3rem;
 }
 
 .text .title .paragraph {
     margin: 1.5rem 3rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .text .bottom a {
@@ -73,24 +77,25 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    -webkit-transition-duration: 0.4s;  
-    transition-duration: 0.4s;  
-    -webkit-transition-property: -webkit-transform;  
-    transition-property: transform;  
-    -webkit-transform: translateZ(0);  
-    -ms-transform: translateZ(0);  
-    transform: translateZ(0);  
-    transition: 0.3s ease-in-out;          
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: 0.3s ease-in-out;
 }
 
 .text .bottom:hover a {
     background-color: hsl(300, 69%, 71%);
     color: #fff;
-    -webkit-transform: translateY(-1.5px);  
-    -ms-transform: translateY(-1.5px);  
+    -webkit-transform: translateY(-1.5px);
+    -ms-transform: translateY(-1.5px);
     transform: translateY(-1.5px);
     box-shadow: 1.5px 1.5px 1.5px 1px rgba(98, 98, 98, 0.69);
 }
+
 .footer {
     grid-area: footer;
 }
@@ -100,7 +105,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: 15px;
-    margin-right: 25px;
+    padding: 30px;
 }
 
 .footer ul li {
@@ -116,12 +121,12 @@ body {
     height: 3rem;
     width: 3rem;
     border-radius: 40px;
-    border:solid 1px #fff;
+    border: solid 1px #fff;
     transition: 0.3s ease-in-out;
 
 }
 
 .footer ul li a:hover {
     color: hsl(300, 69%, 71%);
-    border:solid 1px hsl(300, 69%, 71%);
+    border: solid 1px hsl(300, 69%, 71%);
 }
